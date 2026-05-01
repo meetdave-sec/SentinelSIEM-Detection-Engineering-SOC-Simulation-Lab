@@ -1,2 +1,22 @@
-# SentinelSIEM---Detection-Engineering-SOC-Simulation-Lab
-SentinelSIEM is a hands‑on SOC simulation project using Splunk. It covers the full detection lifecycle with real attack simulations (port scans, brute‑force, web enumeration), multi‑source log ingestion, custom detection rules, dashboards, and end‑to‑end incident investigation workflows.
+# SentinelSIEM – Detection Engineering & SOC Simulation Lab
+
+## Overview
+
+SentinelSIEM is a hands-on cybersecurity project that simulates a real-world Security Operations Center (SOC) using Splunk.
+
+This project demonstrates how attacks are detected, analyzed, and investigated using centralized log monitoring and custom detection rules.
+
+## Lab Environment
+
+- Attacker: Kali Linux
+- Target: Ubuntu Server
+- SIEM: Splunk Enterprise
+- Network: Virtual Lab (192.168.100.0/24)
+
+## Project Goals
+
+- Simulate real-world attacks
+- Ingest logs into SIEM
+- Build detection rules
+- Create dashboards and alerts
+- Perform incident investigation
