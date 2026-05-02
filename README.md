@@ -1,78 +1,94 @@
-# SentinelSIEM – Detection Engineering & SOC Simulation Lab
+# SentinelSIEM – SOC Detection Engineering Lab
 
 ## Overview
 
-SentinelSIEM is a hands-on cybersecurity project that simulates a real-world Security Operations Center (SOC) using Splunk.
+SentinelSIEM is a hands-on cybersecurity project simulating a real-world Security Operations Center (SOC) using Splunk.
 
-The project demonstrates the complete detection lifecycle:
+It demonstrates the complete security lifecycle:
 
-Attack Simulation → Log Ingestion → Detection → Alerting → Investigation
+**Attack Simulation → Log Ingestion → Detection → Alerting → Investigation**
+
+---
+
+## Project Highlights
+
+### SSH Brute Force Detection
+![Brute Force Detection](assets/brute-force-detection.png)
+
+### SOC Dashboard (Attack Monitoring)
+![Dashboard](assets/dashboard_overview.png)
+
+### Triggered Alert
+![Alert](assets/brute-force-alert.png)
 
 ---
 
 ## Lab Architecture
 
-- Attacker: Kali Linux
-- Target: Ubuntu Server
-- SIEM: Splunk Enterprise
-- Network: 192.168.100.0/24
+- **Attacker:** Kali Linux  
+- **Target:** Ubuntu Server  
+- **SIEM:** Splunk Enterprise  
+- **Network:** 192.168.100.0/24  
 
 ---
 
-## Scenario 1: SSH Brute Force Attack
+# Scenario 1: SSH Brute Force Attack
 
 ### Attack
-
-- Tool: Hydra
-- Target: SSH service (Port 22)
-- Result: Multiple failed login attempts
-
----
+- Tool: Hydra  
+- Target: SSH (Port 22)  
+- Result: Multiple failed login attempts  
 
 ### Detection
-
-- Log Source: `/var/log/auth.log`
-- SIEM: Splunk
-- Method: Regex-based field extraction + aggregation
-
----
+- Log Source: `/var/log/auth.log`  
+- Method: Regex-based field extraction + aggregation  
 
 ### Alerting
-
-- Threshold-based detection
-- Scheduled alert triggered on suspicious activity
-
----
+- Threshold-based detection  
+- Automated alert triggered  
 
 ### Investigation
-
-- IP analysis
-- Target user identification
-- Timeline visualization
+- Source IP identification  
+- Target user analysis  
+- Timeline visualization  
 
 ---
 
-### Dashboard
+# Scenario 2: Port Scan Detection
 
-- Top attacker IPs
-- Targeted users
-- Attack timeline
+### Attack
+- Tool: Nmap  
+- Scan Type: TCP SYN Scan  
+
+### Detection
+- Log Source: `/var/log/syslog` (UFW logs)  
+- Method: Aggregation of blocked connection attempts  
+
+### Dashboard Insights
+- Top scanning IPs  
+- Most targeted ports  
+- Attack timeline  
+
+### Alerting
+- Detection of abnormal scan patterns  
+- Automated alert triggered  
 
 ---
 
 ## Key Skills Demonstrated
 
-- SIEM (Splunk)
-- Detection Engineering
-- Log Analysis
-- Incident Investigation
-- Attack Simulation (Hydra, Nmap, Gobuster)
-- Security Monitoring
+- SIEM (Splunk)  
+- Detection Engineering  
+- Log Analysis  
+- Incident Response  
+- Network Security Monitoring  
+- Attack Simulation (Hydra, Nmap)  
 
 ---
 
 ## Project Structure
 
+```
 SentinelSIEM/
 ├── attacks/
 ├── detection-rules/
@@ -82,12 +98,19 @@ SentinelSIEM/
 ├── assets/
 ├── data-ingestion/
 ├── lab-setup/
+```
 
 ---
 
 ## Outcome
 
-This project demonstrates practical SOC analyst capabilities including attack detection, alerting, and investigation using real-world tools and techniques.
+This project demonstrates real-world SOC capabilities:
+
+- Detecting authentication attacks  
+- Identifying network reconnaissance  
+- Building detection rules  
+- Automating alerts  
+- Investigating incidents  
 
 ---
 
